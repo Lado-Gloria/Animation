@@ -1,0 +1,165 @@
+.main{
+  background-image: url(image/brownbackground\ \(1\).jpeg);
+  background-repeat: no-repeat;
+ background-size: cover;
+  overflow-x: hidden;
+ 
+  font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+
+}
+.cake {
+  position: relative;
+  
+  width: 200px;
+  animation: slideFromLeft 2s forwards, dance 30s 2s;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    left: 300px;
+  }
+  100% {
+    left: -10%;
+  }
+}
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(20deg);
+  }
+}
+
+
+.cont{
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+
+}
+
+.nut {
+  position: relative;
+  font-size:3em;
+  top: 120px;
+  /* left: 50%; */
+
+  animation: moveFromRight 2s forwards;
+}
+
+@keyframes moveFromRight {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: -4%;
+  }
+}
+
+
+.word {
+  position: relative;
+  font-size: -2em;
+  top: 250px;
+
+
+  animation: moveFromLeft 2s forwards;
+}
+
+@keyframes moveFromLeft {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 1%;
+  }
+}
+
+
+#go {
+  color: yellow;
+}
+
+#go{
+  font-size: 80px;
+  line-height: 80px;
+  -webkit-text-stroke: 1px #f2c110;
+  color: transparent;
+  background-image: linear-gradient(#fff,#fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -500px 0;
+  animation: backcolor 4s linear infinite alternate;
+}
+@keyframes backcolor {
+100%{
+  background-position: 0 0;
+}
+}
+
+#goo{
+  color: #f2c110;
+}
+#goo{
+  -webkit-text-stroke: 1px #f2c110;
+  color: transparent;
+  background-image: linear-gradient(#fff,#fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -500px 0;
+  animation: backcolor 2s linear infinite alternate;
+}
+@keyframes backcolor {
+100%{
+  background-position: 0 0;
+}
+}
+
+#btn {
+  width: 30%;
+  color: white;
+  border-radius: 15px;
+  border: 2px;
+  border-color: black;
+  background-color: rgb(57, 36, 24);
+  height: 7%;
+}
+
+#mam {
+  width: 80px;
+  height: 80px;
+  right: 30%;
+  position: relative;
+  top: 120px;
+  animation: slideFromLeft 2s forwards, dance 40s infinite 2s;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .cake,
+  .nut,
+  .word,
+  #mam {
+    width: 100px; 
+    display: grid;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cake,
+  .nut,
+  .word,
+  #mam {
+    width: 80px;
+  }
+}
